@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BabyBlue</string>
+
+    <string name="introducao">Você teve um bebê há pouco tempo e gostaríamos de saber como você está se
+    sentindo nos últimos sete dias e não apenas hoje:</string>
+
 </resources>
