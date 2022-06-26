@@ -12,7 +12,19 @@
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tvIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#212121"
+            android:textAlignment="gravity"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="@string/introducao"
+            android:layout_marginBottom="30dp"/>
 
         <TextView
             android:id="@+id/tvPerguntas"
@@ -22,12 +34,14 @@
             android:textAlignment="gravity"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:text="sai daqui"/>
+            android:text="sai daqui"
+            android:layout_marginBottom="30dp"/>
 
         <RadioGroup
             android:id="@+id/rgOpcoes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
 
             <RadioButton
                 android:id="@+id/rbOp1"
@@ -74,7 +88,8 @@
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btnVoltar"
@@ -84,7 +99,8 @@
                 android:textColor="#212121"
                 android:text="Voltar"
                 android:textStyle="bold"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:layout_marginRight="50dp"/>
 
             <Button
                 android:id="@+id/btnProx"
@@ -92,9 +108,20 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:textColor="#212121"
-                android:text="Próximo"
+                android:text="Continuar"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btnFinalizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#212121"
+                android:text="Finalizar"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
 
         </android.support.v7.widget.LinearLayoutCompat>
 

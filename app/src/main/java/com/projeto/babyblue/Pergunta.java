@@ -37,6 +37,21 @@ public class Pergunta {
     //vetor para armazenar respostas do usuario
     private int[] respostas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
+    //peso para cada alternativa de cada pergunta especifica
+    //cada pergunta possui 4 respostas que possuem seus respectivos pesos
+    private int[][] peso = {
+            {0, 1, 2, 3},
+            {0, 1, 2, 3},
+            {3, 2, 1, 0},
+            {0, 1, 2, 3},
+            {3, 2, 1, 0},
+            {3, 2, 1, 0},
+            {3, 2, 1, 0},
+            {3, 2, 1, 0},
+            {3, 2, 1, 0},
+            {3, 2, 1, 0}
+    };
+
     //busca uma pergunta especifica na lista de perguntas de acordo com o valor enviado
     public String getPerguntas(int p) {
         String pergunta = listaPerguntas[p];
@@ -55,8 +70,30 @@ public class Pergunta {
     }
 
     //retorna o valor da resposta do usuario (1, 2, 3 ou 4)
-    //que sera utilizado para realizar o calculo
     public int getRespostas(int p) {
         return respostas[p];
     }
+
+    //retorna os pesos para calculos do resultado
+    public int getPeso(int p, int r) {
+        return peso[p][r];
+    }
+
+    //funcao que realiza o calculo do funcionario
+    public int resultado(){
+
+        //declaramos uma variavel para acumular a soma da pontuacao
+        int calculo = 0;
+        //percorre todas as perguntas
+        for(int p = 0; p < 10; p++){
+            //realiza o somatorio
+            //pega o peso especifico da resposta de determinada pergunta
+            //envia o indice da pergunta para o peso
+            //envia o indice da pergunta para respostas
+            calculo += getPeso(p, getRespostas(p)-1);
+        }
+        //por fim retorna o calculo do resultado
+        return calculo;
+    }
+
 }
