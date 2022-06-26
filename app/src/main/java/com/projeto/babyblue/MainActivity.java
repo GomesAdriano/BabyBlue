@@ -1,5 +1,6 @@
 package com.projeto.babyblue;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         //opcoes de resposta para o usuario escolher
         rgOpcoes.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
@@ -73,13 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //decrementa para a pergunta anterior
                     perguntaAtual--;
-                    //funcao para alterações na tela
-                    mostrarIntro();
-                    //gera uma nova pergunta (no caso gera a pergunta anterior)
-                    gerarPergunta();
-                    //armazena no 'or' a resposta escolhida pelo usuario e envia para o registro
-                    int or = pergunta.getRespostas(perguntaAtual);
-                    registrarResposta(or);
+                    rotina();
 
                     //debug para saber se está recebendo os valores corretos das repostas (1, 2, 3 ou 4)
                     Log.i("Pergunta " + perguntaAtual, String.valueOf(pergunta.getRespostas(perguntaAtual)));
@@ -91,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
         btnProx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 //debug para saber se está recebendo os valores corretos das repostas (1, 2, 3 ou 4)
                 Log.i("Pergunta " + perguntaAtual, String.valueOf(pergunta.getRespostas(perguntaAtual)));
 
@@ -103,16 +98,9 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Responda essa pergunta primeiro!", Toast.LENGTH_SHORT).show();
                         return;
                     }
-
                     //incrementa para a proxima pergunta
                     perguntaAtual++;
-                    //funcao para alterações na tela
-                    mostrarIntro();
-                    //gera uma nova pergunta
-                    gerarPergunta();
-                    //armazena no 'or' a resposta escolhida pelo usuario e envia para o registro
-                    int or = pergunta.getRespostas(perguntaAtual);
-                    registrarResposta(or);
+                    rotina();
                 }
             }
         });
@@ -139,6 +127,16 @@ public class MainActivity extends AppCompatActivity {
         rbOp2 = findViewById(R.id.rbOp2);
         rbOp3 = findViewById(R.id.rbOp3);
         rbOp4 = findViewById(R.id.rbOp4);
+    }
+
+    private void rotina(){
+        //funcao para alterações na tela
+        mostrarIntro();
+        //gera uma nova pergunta ou pode gerar a pergunta anterior)
+        gerarPergunta();
+        //armazena no 'or' a resposta escolhida pelo usuario e envia para o registro
+        int or = pergunta.getRespostas(perguntaAtual);
+        registrarResposta(or);
     }
 
     //funcao que mostra ou esconde a intro e muda visibilidade dos botoes

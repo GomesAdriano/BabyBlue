@@ -3,35 +3,24 @@ package com.projeto.babyblue;
 public class Pergunta {
 
     //lista de perguntas de 1 a 10
-    private String[] listaPerguntas = {
-            "Eu tenho sido capaz de rir e achar graça das coisas",
-            "Eu sinto prazer quando penso no que está por acontecer em meu dia-a-dia",
-            "Eu tenho me culpado sem necessidade quando as coisas saem erradas",
-            "Eu tenho me sentido ansiosa ou preocupada sem uma boa razão",
-            "Eu tenho me sentido assustada ou em pânico sem um bom motivo",
-            "Eu tenho me sentido esmagada pelas tarefas e acontecimentos do meu dia-a-dia",
-            "Eu tenho me sentido tão infeliz que eu tenho tido dificuldade de dormir",
-            "Eu tenho me sentido triste ou arrasada",
-            "Eu tenho me sentido tão infeliz que eu tenho chorado",
-            "A idéia de fazer mal a mim mesma passou por minha cabeça"
+    private final int[] listaPerguntas = {
+            R.string.p1, R.string.p2, R.string.p3, R.string.p4, R.string.p5,
+            R.string.p6, R.string.p7, R.string.p8, R.string.p9, R.string.p10
     };
 
     //lista de respostas para cada pergunta
     //cada pergunta possui 4 respostas
-    private String[][] listaOpcoesRespostas = {
-            {"Como eu sempre fiz", "Não tanto quanto antes", "Sem dúvida, menos que antes", "De jeito nenhum"},
-            {"Como sempre senti", "Talvez, menos que antes", "Com certeza menos", "De jeito nenhum"},
-            {"Sim, na maioria das vezes", "Sim, algumas vezes", "Não muitas vezes", "Não, nenhuma vez"},
-            {"Não, de maneira alguma", "Pouquíssimas vezes", "Sim, algumas vezes", "Sim, muitas vezes"},
-            {"Sim, muitas vezes", "Sim, algumas vezes", "Não muitas vezes", "Não, nenhuma vez"},
-            {"Sim. Na maioria das vezes eu não consigo lidar bem com eles",
-                    "Sim. Algumas vezes não consigo lidar bem como antes",
-                    "Não. Na maioria das vezes consigo lidar bem com eles",
-                    "Não. Eu consigo lidar com eles tão bem quanto antes"},
-            {"Sim, na maioria das vezes", "Sim, algumas vezes", "Não muitas vezes", "Não, nenhuma vez"},
-            {"Sim, na maioria das vezes", "Sim, muitas vezes", "Não muitas vezes", "Não, de jeito nenhum"},
-            {"Sim, quase todo o tempo", "Sim, muitas vezes", "De vez em quando", "Não, nenhuma vez"},
-            {"Sim, muitas vezes, ultimamente", "Algumas vezes nos últimos dias", "Pouquíssimas vezes, ultimamente ", "Nenhuma vez"}
+    private final int[][] listaOpcoesRespostas = {
+            {R.string.r1, R.string.r2, R.string.r3, R.string.r4},
+            {R.string.r5, R.string.r6, R.string.r7, R.string.r4},
+            {R.string.r8, R.string.r9, R.string.r10, R.string.r11},
+            {R.string.r12, R.string.r13, R.string.r9, R.string.r14},
+            {R.string.r14, R.string.r9, R.string.r10, R.string.r11},
+            {R.string.r15, R.string.r16, R.string.r17, R.string.r18},
+            {R.string.r8, R.string.r9, R.string.r10, R.string.r11},
+            {R.string.r8, R.string.r14, R.string.r10, R.string.r19},
+            {R.string.r20, R.string.r14, R.string.r21, R.string.r11},
+            {R.string.r22, R.string.r23, R.string.r24, R.string.r25}
     };
 
     //vetor para armazenar respostas do usuario
@@ -39,7 +28,7 @@ public class Pergunta {
 
     //peso para cada alternativa de cada pergunta especifica
     //cada pergunta possui 4 respostas que possuem seus respectivos pesos
-    private int[][] peso = {
+    private final int[][] peso = {
             {0, 1, 2, 3},
             {0, 1, 2, 3},
             {3, 2, 1, 0},
@@ -53,15 +42,13 @@ public class Pergunta {
     };
 
     //busca uma pergunta especifica na lista de perguntas de acordo com o valor enviado
-    public String getPerguntas(int p) {
-        String pergunta = listaPerguntas[p];
-        return pergunta;
+    public int getPerguntas(int p) {
+        return listaPerguntas[p];
     }
 
     //busca as opcoes de respostas para determinada pergunta
-    public String getOpcoesRespostas(int p, int or) {
-        String respostas = listaOpcoesRespostas[p][or];
-        return respostas;
+    public int getOpcoesRespostas(int p, int or) {
+        return listaOpcoesRespostas[p][or];
     }
 
     //armazena as respostas do usuario no vetor, levando em conta a pergunta e a opcao escolhida
