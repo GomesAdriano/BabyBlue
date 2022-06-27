@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //verifica se o usuario respondeu a questao anterior antes de passar para a proxima
                     if(pergunta.getRespostas(perguntaAtual) <= 0){
-                        Toast.makeText(MainActivity.this, "Responda essa pergunta primeiro!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, R.string.responderQuestaoAnterior, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     //incrementa para a proxima pergunta
@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
     //funcao que mostra ou esconde a intro e muda visibilidade dos botoes
     private void mostrarIntro() {
         if (perguntaAtual > 0)
-            tvIntro.setText("");
+            tvIntro.setVisibility(View.GONE);
         else
-            tvIntro.setText(R.string.introducao);
+            tvIntro.setVisibility(View.VISIBLE);
 
         if(perguntaAtual < 9){
             btnProx.setVisibility(View.VISIBLE);
@@ -197,10 +197,15 @@ public class MainActivity extends AppCompatActivity {
     private void finalizar() {
         //se chegar na ultima pergunta, retorna a pontuação
         //realizar armazenamento do historico aqui
-        if(perguntaAtual >= 9){
+
+        int selecionado = rgOpcoes.getCheckedRadioButtonId();
+
+        if(perguntaAtual >= 9 && selecionado >= 0){
             int resultado = pergunta.resultado();
             Log.i("Resultado", String.valueOf(resultado));
             Toast.makeText(MainActivity.this, "Resultado: " + String.valueOf(resultado), Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(MainActivity.this, R.string.responderQuestaoAnterior, Toast.LENGTH_SHORT).show();
         }
     }
 }
