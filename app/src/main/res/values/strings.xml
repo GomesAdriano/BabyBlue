@@ -5,16 +5,16 @@
     sentindo nos últimos sete dias e não apenas hoje:</string>
 
     <!--Perguntas-->
-    <string name="p1">Eu tenho sido capaz de rir e achar graça das coisas</string>
-    <string name="p2">Eu sinto prazer quando penso no que está por acontecer em meu dia-a-dia</string>
-    <string name="p3">Eu tenho me culpado sem necessidade quando as coisas saem erradas</string>
-    <string name="p4">Eu tenho me sentido ansiosa ou preocupada sem uma boa razão</string>
-    <string name="p5">Eu tenho me sentido assustada ou em pânico sem um bom motivo</string>
-    <string name="p6">Eu tenho me sentido esmagada pelas tarefas e acontecimentos do meu dia-a-dia</string>
-    <string name="p7">Eu tenho me sentido tão infeliz que eu tenho tido dificuldade de dormir</string>
-    <string name="p8">Eu tenho me sentido triste ou arrasada</string>
-    <string name="p9">Eu tenho me sentido tão infeliz que eu tenho chorado</string>
-    <string name="p10">A idéia de fazer mal a mim mesma passou por minha cabeça</string>
+    <string name="p1">1. Eu tenho sido capaz de rir e achar graça das coisas</string>
+    <string name="p2">2. Eu sinto prazer quando penso no que está por acontecer em meu dia-a-dia</string>
+    <string name="p3">3. Eu tenho me culpado sem necessidade quando as coisas saem erradas</string>
+    <string name="p4">4. Eu tenho me sentido ansiosa ou preocupada sem uma boa razão</string>
+    <string name="p5">5. Eu tenho me sentido assustada ou em pânico sem um bom motivo</string>
+    <string name="p6">6. Eu tenho me sentido esmagada pelas tarefas e acontecimentos do meu dia-a-dia</string>
+    <string name="p7">7. Eu tenho me sentido tão infeliz que eu tenho tido dificuldade de dormir</string>
+    <string name="p8">8. Eu tenho me sentido triste ou arrasada</string>
+    <string name="p9">9. Eu tenho me sentido tão infeliz que eu tenho chorado</string>
+    <string name="p10">10. A idéia de fazer mal a mim mesma passou por minha cabeça</string>
 
     <!--Respostas-->
     <string name="r1">Como eu sempre fiz</string>

@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,13 +17,13 @@
 
         <TextView
             android:id="@+id/tvIntro"
+            android:text="@string/introducao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#212121"
             android:textAlignment="gravity"
-            android:textStyle="bold"
             android:textSize="20dp"
-            android:text="@string/introducao"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="30dp"/>
 
         <TextView
@@ -31,9 +32,8 @@
             android:layout_height="wrap_content"
             android:textColor="#212121"
             android:textAlignment="gravity"
-            android:textStyle="bold"
             android:textSize="20dp"
-            android:text="sai daqui"
+            android:text="@string/p1"
             android:layout_marginBottom="30dp"/>
 
         <RadioGroup
@@ -42,44 +42,52 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp">
 
+
             <RadioButton
                 android:id="@+id/rbOp1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="opcao"
-                android:textSize="16dp"
+                android:text="@string/r1"
+                android:textSize="19dp"
                 android:textStyle="normal"
                 android:textColor="#424242"
+                android:buttonTint="@color/rosa"
                 android:textAlignment="gravity"/>
 
             <RadioButton
                 android:id="@+id/rbOp2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="opcao"
-                android:textSize="16dp"
+                android:text="@string/r2"
+                android:textSize="19dp"
+                android:layout_marginTop="20dp"
                 android:textStyle="normal"
                 android:textColor="#424242"
+                android:buttonTint="@color/rosa"
                 android:textAlignment="gravity"/>
 
             <RadioButton
                 android:id="@+id/rbOp3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="opcao"
-                android:textSize="16dp"
+                android:text="@string/r3"
+                android:textSize="19dp"
                 android:textStyle="normal"
                 android:textColor="#424242"
+                android:layout_marginTop="20dp"
+                android:buttonTint="@color/rosa"
                 android:textAlignment="gravity"/>
 
             <RadioButton
                 android:id="@+id/rbOp4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="opcao"
-                android:textSize="16dp"
+                android:text="@string/r4"
+                android:textSize="19dp"
                 android:textStyle="normal"
                 android:textColor="#424242"
+                android:layout_marginTop="20dp"
+                android:buttonTint="@color/rosa"
                 android:textAlignment="gravity"/>
 
         </RadioGroup>
@@ -95,10 +103,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="#212121"
-                android:text="Voltar"
+                android:textColor="#2B2E4A"
                 android:textStyle="bold"
                 android:layout_gravity="center"
+                android:background="@drawable/ic_botao_voltar"
                 android:layout_marginRight="50dp"/>
 
             <Button
@@ -106,8 +114,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="#212121"
-                android:text="Continuar"
+                android:textColor="#2B2E4A"
+                android:background="@drawable/ic_botao_continuar"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
 
@@ -116,14 +124,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="#212121"
-                android:text="Finalizar"
+                android:textColor="#2B2E4A"
+                android:background="@drawable/ic_botao_finalizar"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:visibility="gone"/>
 
         </android.support.v7.widget.LinearLayoutCompat>
 
+
+
+
     </android.support.v7.widget.LinearLayoutCompat>
+
 
 </android.support.v7.widget.LinearLayoutCompat>
