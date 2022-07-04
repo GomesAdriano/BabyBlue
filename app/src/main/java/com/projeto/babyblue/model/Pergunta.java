@@ -1,4 +1,6 @@
-package com.projeto.babyblue;
+package com.projeto.babyblue.model;
+
+import com.projeto.babyblue.R;
 
 public class Pergunta {
 

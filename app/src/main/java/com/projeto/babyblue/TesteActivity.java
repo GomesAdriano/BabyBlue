@@ -11,7 +11,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.projeto.babyblue.model.Pergunta;
+
+public class TesteActivity extends AppCompatActivity {
 
     //declarando componentes
     private TextView tvPerguntas;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_teste);
 
         //inicia componentes e coloca primeira pergunta para o usuario
         iniciarComponentes();
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //verifica se o usuario respondeu a questao anterior antes de passar para a proxima
                     if(pergunta.getRespostas(perguntaAtual) <= 0){
-                        Toast.makeText(MainActivity.this, R.string.responderQuestaoAnterior, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TesteActivity.this, R.string.responderQuestaoAnterior, Toast.LENGTH_SHORT).show();
                         return;
                     }
                     //incrementa para a proxima pergunta
@@ -203,9 +205,9 @@ public class MainActivity extends AppCompatActivity {
         if(perguntaAtual >= 9 && selecionado >= 0){
             int resultado = pergunta.resultado();
             Log.i("Resultado", String.valueOf(resultado));
-            Toast.makeText(MainActivity.this, "Resultado: " + String.valueOf(resultado), Toast.LENGTH_LONG).show();
+            Toast.makeText(TesteActivity.this, "Resultado: " + String.valueOf(resultado), Toast.LENGTH_LONG).show();
         }else{
-            Toast.makeText(MainActivity.this, R.string.responderQuestaoAnterior, Toast.LENGTH_SHORT).show();
+            Toast.makeText(TesteActivity.this, R.string.responderQuestaoAnterior, Toast.LENGTH_SHORT).show();
         }
     }
 }
