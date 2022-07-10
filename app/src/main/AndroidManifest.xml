@@ -10,11 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BabyBlue">
         <activity
+            android:name=".MapaActivity"
+            android:exported="false" />
+        <activity
             android:name=".TesteActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

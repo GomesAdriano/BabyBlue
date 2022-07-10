@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311894631334",
+    "project_id": "babyblue-82834",
+    "storage_bucket": "babyblue-82834.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311894631334:android:ddd0e1060385cc0c412567",
+        "android_client_info": {
+          "package_name": "com.projeto.babyblue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311894631334-etm5ldgjmjemj7bp0c2gvp5o7hk726k1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDExerbNNfNEijytQJvSAZfiK8PHssOle0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311894631334-etm5ldgjmjemj7bp0c2gvp5o7hk726k1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
