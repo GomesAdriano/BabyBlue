@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BabyBlue">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".MapaActivity"
             android:exported="false" />
         <activity

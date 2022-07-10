@@ -1,7 +1,9 @@
 package com.projeto.babyblue;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -113,6 +115,10 @@ public class TesteActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //funcao para finalizar questionario e realizar calculos do resultado
                 finalizar();
+
+                Intent i = new Intent(TesteActivity.this, MapaActivity.class);
+                startActivity(i);
+
             }
         });
     }
