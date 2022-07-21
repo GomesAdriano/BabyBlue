@@ -46,4 +46,7 @@
     <!--Mensagens de Erro-->
     <string name="responderQuestaoAnterior">Responda essa pergunta primeiro!</string>
 
+    <!-- Telefone Maps -->
+    <string name="telefone">Contato: </string>
+
 </resources>
