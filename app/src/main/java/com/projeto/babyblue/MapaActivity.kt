@@ -11,6 +11,7 @@ import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
+import com.projeto.babyblue.adapters.MarkerInfoAdapter
 
 
 class MapaActivity : AppCompatActivity() {
