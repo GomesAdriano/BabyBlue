@@ -35,6 +35,7 @@ class ApresentacaoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_apresentacao)
 
         val introSliderViewPager = findViewById<ViewPager2>(R.id.introSliderViewPager)
@@ -60,7 +61,7 @@ class ApresentacaoActivity : AppCompatActivity() {
             }else{
                 Intent(applicationContext, TesteActivity::class.java).also {
                     startActivity(it)
-                    finish()
+                    //finish()
                 }
             }
         }

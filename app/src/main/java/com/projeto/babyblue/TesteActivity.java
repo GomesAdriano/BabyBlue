@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.projeto.babyblue.model.Pergunta;
 
+import java.util.Objects;
+
 public class TesteActivity extends AppCompatActivity {
 
     //declarando componentes
@@ -35,6 +37,7 @@ public class TesteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_teste);
 
         //inicia componentes e coloca primeira pergunta para o usuario
